@@ -4,9 +4,9 @@ const merge = require("webpack-merge");
 const jsonImporter = require("node-sass-json-importer");
 
 module.exports = function (defaultConfig) {
-  console.log(">>>>> debug default config rules", defaultConfig.module.rules);
+  console.log(">>>>> this is why your approach didn't work, angular already have devtool plugin", defaultConfig.devtool, defaultConfig.plugins.find(p => p.constructor.name === 'SourceMapDevToolPlugin'));
+
   const config = {
-    devtool: "source-map",
     module: {
       rules: [
         {
